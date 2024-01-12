@@ -78,12 +78,14 @@ class AnimalFactory:
 
     @staticmethod
     def create_animal(animal_type, *args):
-        if animal_type not in ['Bird', 'Fish', 'Mammal']:
-            raise NameError('Недопустимый тип животного')
+        if animal_type == 'Bird':              
+            return Bird(*args)
+        elif animal_type == 'Fish':               
+            return Fish(*args)
+        elif animal_type == 'Mammal':
+            return Mammal(*args)
         else:
-            i = f"{animal_type}('{args[0]}', {args[1]})"
-            print(i)
-            return i
+            raise ValueError ('Недопустимыйтип животного')
         
 if __name__ == '__main__':
     animal1 = AnimalFactory.create_animal('Bird', 'Орел', 200)

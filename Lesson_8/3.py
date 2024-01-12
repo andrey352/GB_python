@@ -7,9 +7,11 @@ import json
 def json_to_csv(output: str, source: str = 'our_json.json'):
     with open(source, 'r', encoding='utf-8') as src:
         data = json.load(src)
-    data = [{'level': level, **user} 
-            for level, users in data.items() 
-            for user in users]
+        print(data)
+        print(list(data.items()))
+    data = [{'level': level, **user} for level, users in data.items() for user in users]
+    print(data)
+
     with open(output, 'w') as otp:
         writer = csv.DictWriter(otp, ['level', 'id', 'name'])
         writer.writeheader()
