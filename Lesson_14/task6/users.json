@@ -1,18 +1,17 @@
 [
     {
         "name": "vlad",
-        "id": 011,
+        "id": 11,
         "level": 3
     },
     {
         "name": "max",
-        "id": 022,
+        "id": 22,
         "level": 2        
     },
     {
         "name": "den",
-        "id": 033,
+        "id": 33,
         "level": 5
     }
 ]
-

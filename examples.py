@@ -1,4 +1,19 @@
-from random import randint
 
-print(randint(0, 2))
+id = 111
+s = sum(map(int, list(str(id))))
+print(s)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
