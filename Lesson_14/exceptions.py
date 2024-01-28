@@ -1,5 +1,3 @@
-
-
 from users_module import User
 
 class ProjectException(Exception):
@@ -27,6 +25,4 @@ class NotAuthentificatedError(ProjectException):
     def __str__(self):
         return f"Пользователь не аутенцифицирован"
     
-
-
-
+    

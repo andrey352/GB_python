@@ -1,6 +1,5 @@
-
-import users_module as users_module
-import exceptions as exceptions
+import users_module
+import exceptions
 
 
 class Project:
@@ -31,12 +30,8 @@ class Project:
 if __name__ == "__main__":
     p1 = Project()
     print(p1.users)
-    p1.auth("vlad", 0)
-    p1.add_new_user("Din", 2, 2)
+    p1.auth("vlad", 11)
+    p1.add_new_user("Din-Din", 2, 3)
     print(p1.users)
 
-
-
-
-
-
+    

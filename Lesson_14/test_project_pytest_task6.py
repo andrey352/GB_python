@@ -6,7 +6,7 @@ import pytest
 @pytest.fixture
 def setup_for_adding_users():
     p1 = Project()
-    p1.auth("vlad", 0)
+    p1.auth("vlad", 11)
     return p1
 
 @pytest.fixture
@@ -16,8 +16,8 @@ def setup_for_auth():
 
 
 def test_auth_valid_data(setup_for_auth):
-    setup_for_auth.auth("vlad", 3)
-    assert setup_for_auth.admin == User("vlad", 3, None)
+    setup_for_auth.auth("vlad", 11)
+    assert setup_for_auth.admin == User("vlad", 11, None)
 
 def test_auth_invalid_data(setup_for_auth):
     with pytest.raises(ProjectAccessException):
@@ -31,7 +31,6 @@ def test_add_correct_user(setup_for_adding_users):
 def test_add_invalid_user(setup_for_adding_users):
     with pytest.raises(ProjectLevelException):
         setup_for_adding_users.add_new_user('Taylor', 666, 1)
-
 
 
 

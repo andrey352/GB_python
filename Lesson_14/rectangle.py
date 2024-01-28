@@ -23,12 +23,12 @@ class Rectangle:
     _height = Side(1, 10000)
     _width = Side(1, 10000)
 
-    def __init__(self, height, width=None) -> None:
-        self._height = height
-        if width:
-            self._width = width
+    def __init__(self, width, height=None) -> None:
+        self._width = width
+        if height:
+            self._height = height
         else:
-            self._width = height
+            self._height = width
 
     def __repr__(self):
         return f"Rectangle({self._height = }, {self._width = })"
@@ -65,3 +65,5 @@ class Rectangle:
         return self.area() < obj.area()
 
 
+r1 = Rectangle(5)
+print(r1.per())

@@ -1,14 +1,9 @@
 
-id = 111
-s = sum(map(int, list(str(id))))
-print(s)
+import datetime
 
 
 
-
-
-
-
+print(datetime.datetime(datetime.datetime.now().year, 12, 5))
 
 
 

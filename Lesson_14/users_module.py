@@ -1,5 +1,3 @@
-
-
 import json
 
 class User:
@@ -27,11 +25,4 @@ def load_users(filename: str = "users.json") -> set[User]:
 if __name__ == "__main__":
     print(load_users())
 
-
-
-
-
-
-
-
-
+    
